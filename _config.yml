@@ -1,25 +1,19 @@
 title: "Алгоритмы и структуры данных на C++"
-author: "Сабирова Юлия"
+author: "Yuliya"
 
 execute:
-  execute_notebooks: "off"   # не исполняем при сборке
+  execute_notebooks: "off"
 
 html:
   use_repository_button: true
   use_issues_button: true
   use_edit_page_button: true
-  use_thebe: true            # ВАЖНО: включаем Thebe (JB 1.0+)
-  thebe_config:              # ВАЖНО: задаём конфиг Thebe/Binder
-    binderhub_url: https://mybinder.org
-    repository_url: https://github.com/yuliya-sabirova/cpp-ads-course
-    repository_branch: main
-    kernel_name: xcpp17      # ядро xeus-cling в Binder
+  use_thebe: false            # ← временно отключаем
 
 repository:
   url: https://github.com/yuliya-sabirova/cpp-ads-course
   branch: main
   path_to_book: ""
 
-# (опционально) можно оставить launch_buttons, но он не обязателен для 1.0+
 launch_buttons:
   binderhub_url: https://mybinder.org
