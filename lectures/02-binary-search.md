@@ -59,3 +59,16 @@ python -m http.server -d _build/html # локально открыть в бра
 vector<int> v{1,3,5,7,9};
 cout << binary_search_iter(v, 7) << "\n"; // ожидаем 3
 }
+
+vector<int> v{1,3,5,7,9};
+cout << binary_search_iter(v, 7) << "\n";  // ожидаем 3
+
+
+auto check = [](bool cond, const string& msg){
+  cout << (cond ? "[OK] " : "[FAIL] ") << msg << "\n";
+};
+
+vector<int> v{1,3,5,7,9};
+check(binary_search_iter(v,1) == 0,  "first element");
+check(binary_search_iter(v,9) == 4,  "last element");
+check(binary_search_iter(v,6) == -1, "not found");
