@@ -1,19 +1,44 @@
-title: "Алгоритмы и структуры данных на C++"
-author: "Yuliya"
+# _config.yml — Jupyter Book config
 
+# Базовое
+title: Алгоритмы и структуры данных (C++)
+author: Преподаватель
+only_build_toc_files: true
+
+# Выполнение ноутбуков (мы отключаем)
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: "off"     # не исполнять клетки при сборке
+  timeout: 30
 
+# HTML/тема
 html:
-  use_repository_button: true
-  use_issues_button: true
-  use_edit_page_button: true
-  use_thebe: false            # ← временно отключаем
+  use_download_button: false   # <-- фикс твоей ошибки (не пытаться отдавать .ipynb)
+  home_page_in_toc: true
 
+# Кнопки запуска / интерактив
+launch_buttons:
+  thebe: true                  # включить Thebe (интерактив прямо на странице)
+  binderhub_url: https://mybinder.org
+
+# Конфиг Thebe (ядро для C++ через xeus-cling)
+thebe_config:
+  kernel_name: xcpp17          # имя ядра, которое появится в метаданных клеток
+  predefined_output: false
+
+# Ссылка на репозиторий (для кнопок "репо", правок и т.п.)
 repository:
   url: https://github.com/yuliya-sabirova/cpp-ads-course
   branch: main
-  path_to_book: ""
+  path_to_book: .
 
-launch_buttons:
-  binderhub_url: https://mybinder.org
+# Игнор
+exclude_patterns:
+  - _build
+  - "**/.ipynb_checkpoints"
+  - Thumbs.db
+  - .DS_Store
+
+# Доп. настройки Sphinx при желании
+sphinx:
+  config:
+    language: ru
