@@ -1,27 +1,19 @@
-# Заголовок и базовые настройки
 title: "Алгоритмы и структуры данных на C++"
-author: "Sabirova Yuliya"
+author: "Eldar"
 
-
-# Кнопки запуска и Thebe
-launch_buttons:
-thebe: true
-binderhub_url: https://mybinder.org
-
-
-# Ссылки на репозиторий (кнопки появятся в шапке)
-repository:
-url: https://github.com/yuliya-sabirova/cpp-ads-course
-path_to_book: ""
-branch: main
-
+execute:
+  execute_notebooks: "off"   # не исполняем при сборке
 
 html:
-use_repository_button: true
-use_issues_button: true
-use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  use_edit_page_button: true
 
+repository:
+  url: https://github.com/yuliya-sabirova/cpp-ads-course
+  branch: main
+  path_to_book: ""
 
-# Исполнение при сборке книги отключено (нам не нужно)
-execute:
-execute_notebooks: "off"
+launch_buttons:
+  thebe: true
+  binderhub_url: https://mybinder.org
