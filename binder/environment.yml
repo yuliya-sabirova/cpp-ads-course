@@ -1,0 +1,10 @@
+name: cpp-book
+channels:
+- conda-forge
+dependencies:
+- python=3.11
+- jupyterlab
+- notebook
+- xeus-cling # ядро C++ (даёт xcpp11/xcpp14/xcpp17/xcpp20)
+- xtensor # популярная зависимость, можно удалить при желании
+- cmake # на всякий случай
